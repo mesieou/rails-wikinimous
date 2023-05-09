@@ -1,0 +1,10 @@
+<%= link_to articles_path do %>
+  <i class="fa-solid fa-house fa-xl m-4"></i>
+<% end %>
+<%= link_to edit_article_path do %>
+  <i class="fa-solid fa-file-pen fa-xl" style="color: #48dfea; m-4"></i>
+<% end %>
+<div class="container mt-4">
+  <h1 class="gray mb-3">Article Title: <%= @article.title %> </h1>
+  <h5 class="gray">Article Content: <%= @article.content %> </h5>
+</div>

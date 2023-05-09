@@ -1,0 +1,7 @@
+<%= link_to articles_path do %>
+  <i class="fa-solid fa-house fa-xl m-4"></i>
+<% end %>
+<div class="container mt-4">
+  <h1 class="gray mb-3">Edit article: <%= @article.title %> </h1>
+  <%= render "form", article: @article %>
+</div>

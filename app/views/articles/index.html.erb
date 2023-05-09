@@ -1,0 +1,23 @@
+<%= link_to new_article_path do %>
+  <i class="fa-solid fa-plus fa-xl m-4"></i>
+<% end %>
+
+<div class="container mt-4">
+  <h1>Welcome to the Wikinimous</h1>
+  <h4 class="gray">List of articles:</h2>
+  <% @articles.each do |article| %>
+    <div class="">
+      <%= link_to article.title,
+        article_path(article),
+        class: "list-group-item list-group-item-action active aria-current:'true' mb-3"
+      %>
+    </div>
+    <div>
+      <%= link_to article_path(article),
+          data: {turbo_method: :delete,
+                 turbo_confirm: "Are you sure?"} do %>
+                <i class="fa-solid fa-trash fa-lg" style="color: #5b2424;"></i>
+         <% end %>
+    </div>
+    <% end %>
+</div>
